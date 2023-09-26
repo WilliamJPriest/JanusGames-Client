@@ -15,7 +15,7 @@ export default function currentReleases() {
                   Mother Base
               </h2>
               <p> Release Date</p>
-              <p> Desc</p>
+              <p> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your Milita to Victory</p>
             </div>
         </article>
    </section>
