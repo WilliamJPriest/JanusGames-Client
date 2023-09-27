@@ -5,17 +5,39 @@ export default function currentReleases() {
     <>  
    <h2 className='bold text-2xl p-10'>Current Releases</h2>
    {/* red underline */}
-   <section className='w-full flex pl-20 py-10'> 
+   <section className='w-full flex justify-center gap-10 pb-20'> 
       
-        <article className='w-64 h-64 flex justify-center border-2 rounded'>
-         
-            <div className='w-48 h-48 flex align-center flex-col'>
-              <img src="" alt="motherbase splash screen" />
-              <h2>
+        <article className='w-64 h-80 flex border-2 rounded flex-col'>
+          <img className="p-2" src="hellofeelow.png" alt="motherbase splash screen" />
+            <div className='w-64 h-48 flex text-center flex-col '>
+
+              <h2 className='text-2xl pb-2'>
                   Mother Base
               </h2>
-              <p> Release Date</p>
-              <p> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your Milita to Victory</p>
+              <p className='pb-2'> Release Date</p>
+              <p className='flex text-left p-2'> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your Milita to Victory</p>
+            </div>
+        </article>
+        <article className='w-64 h-80 flex border-2 rounded flex-col'>
+          <img className="p-2" src="hellofeelow.png" alt="motherbase splash screen" />
+            <div className='w-64 h-48 flex text-center flex-col '>
+
+              <h2 className='text-2xl pb-2'>
+                  Mother Base
+              </h2>
+              <p className='pb-2'> Release Date</p>
+              <p className='flex text-left p-2'> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your Milita to Victory</p>
+            </div>
+        </article>
+        <article className='w-64 h-80 flex border-2 rounded flex-col'>
+          <img className="p-2" src="hellofeelow.png" alt="motherbase splash screen" />
+            <div className='w-64 h-48 flex text-center flex-col '>
+
+              <h2 className='text-2xl pb-2'>
+                  Mother Base
+              </h2>
+              <p className='pb-2'> Release Date</p>
+              <p className='flex text-left p-2'> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your Milita to Victory</p>
             </div>
         </article>
    </section>
