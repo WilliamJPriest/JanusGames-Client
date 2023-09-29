@@ -52,19 +52,19 @@ export default function hero() {
     };
   return (
     <>
-        <section>
-            <article>
+        <section className="relative">
+            <article className="z-10">
               <img  className="w-full" src="hellofeelow.png" alt="placeholder" />
                 
             </article>
             <ToastContainer/>
-            <article>
+            <article className="lg:absolute lg:left-[25%] lg:bottom-[24%] lg:bg-white lg:bg-opacity-50 py-2  border-2 rounded gap-2">
                 <form>
-                    <label htmlFor="name"> Name</label>
+                    <label className="p-2" htmlFor="name"> Name</label>
                     <input type="text" value={name} onChange={ e => handleNameChange(e)} id="name" placeholder='your name'/>
-                    <label htmlFor="email"> email</label>
+                    <label className="p-2" htmlFor="email"> Email</label>
                     <input type="text"  value={email} onChange={ e => handleEmailChange(e)} id="email" placeholder='your email'/>
-                    <button onClick={subBTN}> Subscribe</button>
+                    <button className="p-2" onClick={subBTN}> Subscribe</button>
                 </form>
             </article>
         </section>
