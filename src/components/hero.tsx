@@ -54,7 +54,7 @@ export default function hero() {
     <>
         <section className="relative">
             <article className="z-10">
-              <img  className="w-full" src="hellofeelow.png" alt="placeholder" />
+              <img  className="w-full h-[500px] boxShadow" src="space.jpg" alt="placeholder" />
                 
             </article>
             <ToastContainer/>
