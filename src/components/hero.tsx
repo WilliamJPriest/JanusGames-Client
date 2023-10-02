@@ -58,8 +58,8 @@ export default function hero() {
                 
             </article>
             <ToastContainer/>
-            <article className="lg:absolute lg:left-[25%] lg:bottom-[24%] lg:bg-white lg:bg-opacity-50 py-2  border-2 rounded gap-2">
-                <form>
+            <article className="absolute lg:left-[25%] lg:bottom-[24%] lg:bg-white lg:bg-opacity-50 bottom-[48%] flex flex-row py-2 border-2 rounded gap-2">
+                <form className="">
                     <label className="p-2" htmlFor="name"> Name</label>
                     <input type="text" value={name} onChange={ e => handleNameChange(e)} id="name" placeholder=' Name'/>
                     <label className="p-2" htmlFor="email"> Email</label>
