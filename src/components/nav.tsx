@@ -9,16 +9,16 @@ export default function nav() {
 
   const youtube = faYoutube as IconProp;
   const github = faGithub as IconProp;
-  const tiktoc = faTiktok as IconProp;
+  const tiktok = faTiktok as IconProp;
   return (
     <>
         <div>
             <nav className='flex flex-row justify-between p-2'>
                 <h1 className='text-3xl font-bold'>Janus Games Studio</h1>
                 <div className='flex gap-2'>
-                  <a href=""><FontAwesomeIcon icon ={youtube}  /></a>
-                  <a href=""><FontAwesomeIcon icon ={github}  /></a>
-                  <a href=""><FontAwesomeIcon icon ={tiktoc}  /></a>
+                  <a href="https://www.youtube.com/@ThePercOffense?sub_confirmation=1"><FontAwesomeIcon icon ={youtube}  /></a>
+                  <a href="https://github.com/WilliamJPriest"><FontAwesomeIcon icon ={github}  /></a>
+                  <a href=""><FontAwesomeIcon icon ={tiktok}  /></a>
                 </div>
             </nav>
         </div>
