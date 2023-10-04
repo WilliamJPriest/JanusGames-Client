@@ -3,7 +3,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './pages/home'
 import NotFound from './pages/notfound'
-// import Newsletter from './pages/newsletter'
+import Unsubscriber from './pages/unsubscriber'
 
 function App() {
 
@@ -13,8 +13,8 @@ function App() {
       <Routes>
         <Route index element={<Home/>}/>
         <Route path='*' element={<NotFound />}/>
-      </Routes>
-    
+        <Route path='unsubscriber' element={<Unsubscriber />}/>
+      </Routes>    
     </BrowserRouter>
     </>
   )
