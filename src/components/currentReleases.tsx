@@ -5,8 +5,7 @@ export default function currentReleases() {
     <>  
    <h2 className='bold text-2xl p-10'>Current Releases</h2>
    {/* red underline */}
-   <section className='w-full flex justify-center align-center mx-auto gap-10 flex-col md:flex-row'> 
-      
+   <section className='flex justify-center align-center grid grid-cols-1 mx-auto pt-2 md:grid md:grid-cols-3 gap-3 w-max'> 
         <article className='w-64 h-96 flex border-2 rounded flex-col'>
           <img className="p-2 2 h-40" src="military-placeholder.jpg" alt="motherbase splash screen" />
             <div className='w-64 h-48 flex text-center flex-col '>
