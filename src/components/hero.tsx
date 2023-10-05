@@ -58,14 +58,16 @@ export default function hero() {
                 
             </article>
             <ToastContainer/>
-            <article className="absolute lg:left-[25%] lg:bottom-[24%] lg:bg-white lg:bg-opacity-50 bottom-[48%] flex flex-row py-2 border-2 rounded gap-2">
-                <form className="">
-                    <label className="p-2" htmlFor="name"> Name</label>
-                    <input type="text" value={name} onChange={ e => handleNameChange(e)} id="name" placeholder=' Name'/>
-                    <label className="p-2" htmlFor="email"> Email</label>
-                    <input type="text"  value={email} onChange={ e => handleEmailChange(e)} id="email" placeholder=' Email'/>
-                    <button className="p-2 m-2 border-2 rounded" onClick={subBTN}> Subscribe</button>
-                </form>
+            <article className="lg:absolute lg:left-[25%] lg:bottom-[24%] md:bg-white lg:bg-opacity-50 bottom-[48%] flex flex-row py-2 md:border-2 border-black-2 rounded gap-2">
+                <div className="flex flex-col md:flex-row">
+                  <form >
+                      <label className="p-2" htmlFor="name"> Name</label>
+                      <input className="w-36" type="text" value={name} onChange={ e => handleNameChange(e)} id="name" placeholder=' Name'/>
+                      <label className="p-2" htmlFor="email"> Email</label>
+                      <input className="w-36" type="text"  value={email} onChange={ e => handleEmailChange(e)} id="email" placeholder=' Email'/>
+                      <button className="p-2 m-2 border-2 rounded" onClick={subBTN}> Subscribe</button>
+                  </form>
+                </div>
             </article>
         </section>
     </>
