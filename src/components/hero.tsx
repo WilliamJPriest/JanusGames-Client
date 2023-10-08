@@ -1,39 +1,32 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { ToastContainer,toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function hero() {
   const [client,setClient]=useState({
     name:"",
     email:""
   })
-  const [name,setName] = useState("")
-  const [email,setEmail] = useState("")
 
 
+  const handleChange = (e:any) =>{
+    setClient({
+      ...client,
+      [e.target.name] : e.target.value,
+    })
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setName(e.target.value);
-      console.log(e.target.value);
-    };
-
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setEmail(e.target.value);
-      console.log(e.target.value);
-    };
+  }
 
     const subBTN = async (e: any) => {
       e.preventDefault();
+      console.log(client)
       const validRegex = /^\w+([\.+-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-      if (email.match(validRegex)) {
-        const requestData = {
-          name: name,
-          email: email,
-        };
-    
+      if (client.email.match(validRegex)) {
+
         try {
           const response = await fetch('http://127.0.0.1:5000/newsletter', {
             method: 'POST',
-            body: JSON.stringify(requestData),
+            body: JSON.stringify(client),
             headers: {
               'Content-Type': 'application/json',
             },
@@ -42,8 +35,11 @@ export default function hero() {
           if (response.ok) {
             const responseData = await response.json();
             toast('Success: ' + responseData.message);
-            setEmail('');
-            setName('');
+            setClient({
+              ...client,
+              name: "",
+              email:""
+            })
           } else {
             const errorData = await response.json();
             toast('Error: ' + errorData.message);
@@ -57,19 +53,20 @@ export default function hero() {
     };
   return (
     <>
+    <ToastContainer/>
         <section className="relative">
             <article className="z-10">
               <img  className="w-full h-[500px] boxShadow" src="space.jpg" alt="placeholder" />
                 
             </article>
-            <ToastContainer/>
+            
             <article className="lg:absolute lg:left-[35%] lg:bottom-[24%] md:bg-white lg:bg-opacity-50 bottom-[48%] flex flex-row py-2 md:border-2 border-black-2 rounded gap-2">
                 <div className="flex flex-col md:flex-row">
                   <form >
                       <label className="p-2" htmlFor="name"> Name</label>
-                      <input className="w-36" type="text" value={name} onChange={ e => handleNameChange(e)} id="name" placeholder=' Name'/>
+                      <input className="w-36" type="text" name="name" value={client.name} onChange={handleChange} id="name" placeholder=' Name'/>
                       <label className="p-2" htmlFor="email"> Email</label>
-                      <input className="w-36" type="text"  value={email} onChange={ e => handleEmailChange(e)} id="email" placeholder=' Email'/>
+                      <input className="w-36" type="text" name="email" value={client.email} onChange={handleChange} id="email" placeholder=' Email'/>
                       <button className="p-2 m-2 border-2 rounded" onClick={subBTN}> Subscribe</button>
                   </form>
                 </div>
