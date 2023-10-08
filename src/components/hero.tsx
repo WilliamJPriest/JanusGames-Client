@@ -60,14 +60,14 @@ export default function hero() {
                 
             </article>
             
-            <article className="lg:absolute lg:left-[35%] lg:bottom-[24%] md:bg-white lg:bg-opacity-50 bottom-[48%] flex flex-row py-2 md:border-2 border-black-2 rounded gap-2">
+            <article className="lg:absolute lg:left-[30%] lg:bottom-[34%] md:bg-white lg:bg-opacity-50  flex flex-row py-2 md:border-2 border-black-2 rounded gap-2">
                 <div className="flex flex-col md:flex-row">
-                  <form >
+                  <form>
                       <label className="p-2" htmlFor="name"> Name</label>
                       <input className="w-36" type="text" name="name" value={client.name} onChange={handleChange} id="name" placeholder=' Name'/>
                       <label className="p-2" htmlFor="email"> Email</label>
                       <input className="w-36" type="text" name="email" value={client.email} onChange={handleChange} id="email" placeholder=' Email'/>
-                      <button className="p-2 m-2 border-2 rounded" onClick={subBTN}> Subscribe</button>
+                      <button className="p-2 m-2 border-2 rounded w-32" onClick={subBTN}> Subscribe</button>
                   </form>
                 </div>
             </article>
