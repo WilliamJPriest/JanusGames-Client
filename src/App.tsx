@@ -13,7 +13,7 @@ function App() {
       <Routes>
         <Route index element={<Home/>}/>
         <Route path='*' element={<NotFound />}/>
-        <Route path='unsubscriber' element={<Unsubscriber />}/>
+        <Route path='/unsubscriber' element={<Unsubscriber />}/>
       </Routes>    
     </BrowserRouter>
     </>
