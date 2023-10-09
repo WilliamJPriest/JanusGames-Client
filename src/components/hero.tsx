@@ -8,7 +8,6 @@ export default function hero() {
     email:""
   })
 
-
   const handleChange = (e:any) =>{
     setClient({
       ...client,
@@ -22,8 +21,9 @@ export default function hero() {
       console.log(client)
       const validRegex = /^\w+([\.+-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
       if (client.email.match(validRegex)) {
-
+        
         try {
+          
           const response = await fetch('http://127.0.0.1:5000/newsletter', {
             method: 'POST',
             body: JSON.stringify(client),
@@ -40,6 +40,7 @@ export default function hero() {
               name: "",
               email:""
             })
+            
           } else {
             const errorData = await response.json();
             toast('Error: ' + errorData.message);
@@ -50,6 +51,7 @@ export default function hero() {
       } else {
         toast('Email invalid');
       }
+      
     };
   return (
     <>
