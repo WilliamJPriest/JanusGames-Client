@@ -23,23 +23,28 @@ export default function hero() {
       if (client.email.match(validRegex)) {
         
         try {
+          const requestData = {
+            'name': client.name,
+            'email': client.email
+          };
           
           const response = await fetch('http://127.0.0.1:5000/newsletter', {
             method: 'POST',
-            body: JSON.stringify(client),
+            body: JSON.stringify(requestData),
             headers: {
               'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin' :'*',
             },
           });
-    
           if (response.ok) {
             const responseData = await response.json();
             toast('Success: ' + responseData.message);
-            setClient({
-              ...client,
-              name: "",
-              email:""
-            })
+            console.log(requestData.name)
+            // setClient({
+            //   ...client,
+            //   name: "",
+            //   email:""
+            // })
             
           } else {
             const errorData = await response.json();
