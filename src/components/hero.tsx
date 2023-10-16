@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ToastContainer,toast } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+// import 'dotenv/config'
 
 export default function hero() {
   const [client,setClient]=useState({
@@ -28,7 +29,7 @@ export default function hero() {
             'email': client.email
           };
           
-          const response = await fetch('http://127.0.0.1:5000/newsletter', {
+          const response = await fetch(import.meta.env.REACT_APP_ADDEMAILAWSFUNC  , {
             method: 'POST',
             body: JSON.stringify(requestData),
             headers: {
