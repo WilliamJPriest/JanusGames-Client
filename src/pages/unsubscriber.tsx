@@ -1,6 +1,6 @@
 import 'react'
 import Nav from "../components/nav"
-import Hero from "../components/hero"
+import UnSubHero from "../components/unsubHero"
 import Unsubscriber from "../components/unsubscriber"
 import Footer from "../components/footer"
 
@@ -8,7 +8,7 @@ export default function unsubscriber() {
   return (
     <>
         <Nav/>
-        <Hero/>
+        <UnSubHero/>
         <Unsubscriber/>
         <Footer/>
     </>

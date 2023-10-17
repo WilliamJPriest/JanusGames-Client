@@ -7,3 +7,9 @@
     -webkit-box-shadow: 2px 8px 30px -4px rgba(66, 117, 144, 1);
     -moz-box-shadow: 2px 8px 30px -4px rgba(66, 117, 144, 1);
 }
+
+.boxShadowRed{
+    box-shadow: 2px 8px 30px -4px rgb(144, 67, 66);
+    -webkit-box-shadow: 2px 8px 30px -4px rgb(144, 67, 66);
+    -moz-box-shadow: 2px 8px 30px -4px rgb(144, 67, 66);
+}

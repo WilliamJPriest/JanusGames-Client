@@ -14,7 +14,7 @@ export default function nav() {
     <>
         <div>
             <nav className='flex flex-row justify-between p-2'>
-                <h1 className='text-3xl font-bold'>Janus Games Studio</h1>
+                <a href="/"><h1 className='text-3xl font-bold'>Janus Games Studio</h1></a>
                 <div className='flex gap-2'>
                   <a href="https://www.youtube.com/@ThePercOffense?sub_confirmation=1"><FontAwesomeIcon icon ={youtube}  /></a>
                   <a href="https://github.com/WilliamJPriest"><FontAwesomeIcon icon ={github}  /></a>
