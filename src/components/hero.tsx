@@ -28,12 +28,11 @@ export default function hero() {
             'email': client.email
           };
           
-          const response = await fetch( import.meta.env.REACT_APP_ADDEMAILAWSFUNC, {
+          const response = await fetch(import.meta.env.REACT_APP_ADDEMAILAWSFUNC , {
             method: 'POST',
             body: JSON.stringify(requestData),
             headers: {
               'Content-Type': 'application/json',
-              'Access-Control-Allow-Origin' :'*',
             },
           });
           if (response.ok) {

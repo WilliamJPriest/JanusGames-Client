@@ -21,7 +21,7 @@ export default function unsubscriber() {
           'email': unSubEmail
         };
         
-        const response = await fetch( import.meta.env.REACT_APP_REMOVEEMAILAWSFUNC+"email="+{unSubEmail}  , {
+        const response = await fetch(import.meta.env.REACT_APP_REMOVEEMAILAWSFUNC + 'email='+ unSubEmail  , {
           method: 'GET',
 
         });
