@@ -21,17 +21,12 @@ export default function unsubscriber() {
           'email': unSubEmail
         };
         
-        const response = await fetch(import.meta.env.REACT_APP_REMOVEEMAILAWSFUNC  , {
+        const response = await fetch( import.meta.env.REACT_APP_REMOVEEMAILAWSFUNC+"email="+{unSubEmail}  , {
           method: 'GET',
-          body: JSON.stringify(requestData),
-          headers: {
-            'Content-Type': 'application/json',
-            'Access-Control-Allow-Origin' :'*',
-          },
+
         });
         if (response.ok) {
-          const responseData = await response.json();
-          toast('Success: ' + responseData.message);
+          toast('Success: Unsubscribed');
           console.log(requestData.email)
           // setClient({
           //   ...unSubEmail,
@@ -41,6 +36,7 @@ export default function unsubscriber() {
           
         } else {
           const errorData = await response.json();
+          console.log(errorData)
           toast('Error: ' + errorData.message);
         }
       } catch (error) {
@@ -60,9 +56,9 @@ export default function unsubscriber() {
             <h3 className="bold text-2xl p-10">Hate to see you go</h3>
             <div className='pb-10'>
               <input onChange={handleChange} value={unSubEmail} placeholder="email"/>
-              <button className="ml-2 px-2 border-2 border-black rounded" onClick={unSubBTN}>Unsubscribe</button>
+              <button className="ml-2 px-2 border-2 hover:border-red-800 rounded hover:bg-red-500 hover:text-white" onClick={unSubBTN}>Unsubscribe</button>
             </div>
-          <Link className="text-blue-500 py-10" to="/" > Return Home</Link>
+          <Link className="hover:text-blue-500 py-10" to="/" > Return Home</Link>
         </div>
         
       </div>

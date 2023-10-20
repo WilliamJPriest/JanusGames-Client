@@ -28,7 +28,7 @@ export default function hero() {
             'email': client.email
           };
           
-          const response = await fetch(import.meta.env.REACT_APP_ADDEMAILAWSFUNC  , {
+          const response = await fetch( import.meta.env.REACT_APP_ADDEMAILAWSFUNC, {
             method: 'POST',
             body: JSON.stringify(requestData),
             headers: {
@@ -37,8 +37,7 @@ export default function hero() {
             },
           });
           if (response.ok) {
-            const responseData = await response.json();
-            toast('Success: ' + responseData.message);
+            toast('Success: Subscribed');
             console.log(requestData.name)
             // setClient({
             //   ...client,
@@ -74,7 +73,7 @@ export default function hero() {
                       <input className="w-36" type="text" name="name" value={client.name} onChange={handleChange} id="name" placeholder=' Name'/>
                       <label className="p-2" htmlFor="email"> Email</label>
                       <input className="w-36" type="text" name="email" value={client.email} onChange={handleChange} id="email" placeholder=' Email'/>
-                      <button className="p-2 m-2 border-2 rounded w-32" onClick={subBTN}> Subscribe</button>
+                      <button className="p-2 m-2 border-2 rounded w-32 hover:border-sky-800 hover:bg-sky-500 hover:text-white" onClick={subBTN}> Subscribe</button>
                   </form>
                 </div>
             </article>

@@ -13,7 +13,7 @@ export default function currentReleases() {
               <h2 className='text-2xl pb-2'>
                   Mother Base
               </h2>
-              <p className='pb-2'> Release Date</p>
+              <p className='pb-2'> Coming Soon</p>
               <p className='flex text-left p-2'> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your miltitary to Victory</p>
             </div>
         </article>
@@ -24,7 +24,7 @@ export default function currentReleases() {
               <h2 className='text-2xl pb-2'>
                   Mother Base
               </h2>
-              <p className='pb-2'> Release Date</p>
+              <p className='pb-2'> Coming Soon</p>
               <p className='flex text-left p-2'> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your miltitary to Victory</p>
             </div>
         </article>
@@ -35,7 +35,7 @@ export default function currentReleases() {
               <h2 className='text-2xl pb-2'>
                   Mother Base
               </h2>
-              <p className='pb-2'> Release Date</p>
+              <p className='pb-2'> Coming Soon</p>
               <p className='flex text-left p-2'> A Miltitary sim where you can buy your own custom base, accept contracts, and lead your miltitary to Victory</p>
             </div>
         </article>
